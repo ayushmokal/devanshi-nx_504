@@ -257,66 +257,94 @@ export default function Home() {
       </section>
 
       {/* Updated Footer */}
-      <footer className="bg-[#F5E6D3] text-[#8B4513] py-8 mt-16">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-8">
-      <h2 className="text-3xl font-bold mb-4">Get In Touch</h2>
-      <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8">
+      <footer className="bg-[#F5E6D3] text-[#8B4513] py-12 mt-16 border-t border-[#D6C29F]">
+  <div className="container mx-auto px-6 lg:px-20">
+    {/* Contact Information */}
+    <div className="mb-12">
+      <h2 className="text-4xl font-bold mb-6 text-[#8B4513]">Get In Touch</h2>
+      <div className="flex flex-col md:flex-row md:justify-between space-y-8 md:space-y-0">
+        {/* Banquet Address */}
         <div>
-          <h3 className="font-semibold">Banquet Address</h3>
-          <p>Plot No. L-1, Sector 6(W), New Panvel (W),</p>
-          <p>Navi Mumbai 410206</p>
+          <h3 className="text-lg font-semibold mb-2">Banquet Address</h3>
+          <p className="text-sm">Plot No. L-1, Sector 6(W), New Panvel (W),</p>
+          <p className="text-sm">Navi Mumbai 410206</p>
         </div>
+        {/* Contact Information */}
         <div>
-          <h3 className="font-semibold">Contact us</h3>
-          <p>9619331131</p>
-          <p>9619441141</p>
+          <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
+          <p className="text-sm">9619331131</p>
+          <p className="text-sm">9619441141</p>
         </div>
+        {/* Email Information */}
         <div>
-          <h3 className="font-semibold">Email Us</h3>
-          <p>devanshievents@gmail.com</p>
+          <h3 className="text-lg font-semibold mb-2">Email Us</h3>
+          <p className="text-sm">devanshievents@gmail.com</p>
         </div>
       </div>
     </div>
-    
-    <div className="flex flex-col md:flex-row justify-center items-center mb-8 space-y-4 md:space-y-0">
-      <Input placeholder="Your Email Address" className="bg-white md:mr-2 w-full md:w-64" />
-      <Button className="bg-[#8B4513] hover:bg-[#6F3609] text-white w-full md:w-auto">
+
+    {/* Newsletter Subscription */}
+    <div className="flex flex-col md:flex-row items-start mb-12 space-y-6 md:space-y-0 md:space-x-4">
+      <Input 
+        placeholder="Your Email Address" 
+        className="bg-white shadow-md border-none focus:ring-2 focus:ring-[#8B4513] w-full md:w-96 py-3 px-4 text-sm" 
+      />
+      <Button className="bg-[#8B4513] hover:bg-[#6F3609] text-white text-sm py-3 px-8 rounded-lg shadow-md w-full md:w-auto">
         Subscribe
       </Button>
     </div>
 
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+    {/* Events, Quick Links, and Google Maps */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 mb-12">
+      {/* Our Events */}
       <div>
-        <h3 className="font-bold mb-2">About Devanshi Banquets</h3>
-        <p className="text-sm">With a resolve to become one of the most sought-after wedding event planning services, Team Devanshi Banquets has been delivering services that are a class apart from the rest, designing events, etc. We believe in bringing fresh ideas to the table, destination events, etc. We believe in bringing fresh ideas to the table, thus creating your special day the way you imagined it to be.</p>
-      </div>
-      <div>
-        <h3 className="font-bold mb-2">Our Events</h3>
-        <ul className="text-sm">
-          <li>Wedding</li>
-          <li>Engagement</li>
-          <li>Birthday Party</li>
-          <li>Corporate Events</li>
+        <h3 className="font-bold text-lg mb-4">Our Events</h3>
+        <ul className="text-sm leading-relaxed space-y-2">
+          <li className="hover:text-[#6F3609] transition duration-200">Wedding</li>
+          <li className="hover:text-[#6F3609] transition duration-200">Engagement</li>
+          <li className="hover:text-[#6F3609] transition duration-200">Birthday Party</li>
+          <li className="hover:text-[#6F3609] transition duration-200">Corporate Events</li>
         </ul>
       </div>
+
+      {/* Quick Links */}
       <div>
-        <h3 className="font-bold mb-2">Quick Links</h3>
-        <ul className="text-sm">
+        <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+        <ul className="text-sm leading-relaxed space-y-2">
           {navItems.map((item) => (
-            <li key={item.name} className="mb-1">
+            <li key={item.name} className="hover:text-[#6F3609] transition duration-200">
               <Link href={item.href} className="hover:underline">{item.name}</Link>
             </li>
           ))}
         </ul>
       </div>
+
+      {/* Google Maps */}
+      <div>
+        <h3 className="font-bold text-lg mb-4">Our Location</h3>
+        <div className="w-full h-48 bg-gray-200">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.601509398055!2d73.10037031117156!3d19.03727335311199!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9e9d7678267%3A0xc62064ffc5975921!2sAmarante%2C%20NEELSIDHI%20AMARANTE%2C%20Roadpali%2C%20Kalamboli%2C%20Panvel%2C%20Navi%20Mumbai%2C%20Maharashtra%20410218!5e0!3m2!1sen!2sin!4v1728507998350!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen={true}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
     </div>
 
-    <div className="text-center text-sm">
+    {/* Footer Bottom */}
+    <div className="border-t border-[#D6C29F] pt-6 text-left text-xs text-[#8B4513]">
       <p>Copyright © 2023. All rights reserved | Crafted by 504 LABS</p>
     </div>
   </div>
 </footer>
-    </main>
+
+
+
+</main>
   );
 }
