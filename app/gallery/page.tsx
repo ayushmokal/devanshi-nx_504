@@ -297,8 +297,8 @@ export default function Home() {
               />
               <h2 className="text-xl font-bold mb-2">Banquet Address</h2>
               <p className="text-sm mb-4">
-                Plot No. L-1, Sector KWC, Near Express Way, next to Devanshi Inn Hotel,
-                Kalamboli, Panvel, Maharashtra 410218
+              Neelsidhi Amrante, Shop No. F-12,13,14,15, 1st Floor,
+              Near Dmart, Sector-9E, Kalamboli, Navi Mumbai, Maharashtra - 410218.
               </p>
               <h2 className="text-xl font-bold mb-2">Contact us</h2>
               <a href="tel:+919529023967" className="block text-sm text-blue-600 hover:underline mb-1">9529023967</a>
@@ -325,7 +325,6 @@ export default function Home() {
                     <li><Link href="/amenities" className="hover:underline">Amenities</Link></li>
                     <li><Link href="/events" className="hover:underline">Events</Link></li>
                     <li><Link href="/gallery" className="hover:underline">Gallery</Link></li>
-                    <li><Link href="/blog" className="hover:underline">Blog</Link></li>
                     <li><Link href="/contact" className="hover:underline">Contact Us</Link></li>
                   </ul>
                 </div>
@@ -352,7 +351,7 @@ export default function Home() {
   </p>
 </div>
         </div>
-      </footer>
+      </footer>  
     </main>
   );
 }

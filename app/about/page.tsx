@@ -8,6 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import Head from 'next/head';
 
 
 export default function Home() {
@@ -71,6 +72,10 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#FFF9F0]">
+      <Head>
+        <title>Devanshi NX Banquets - Best Banquet Hall in Navi Mumbai</title>
+        <meta name="description" content="Devanshi NX Banquets offers the best banquet hall in Navi Mumbai for weddings, engagements, birthdays, and corporate events. Book your perfect event venue today!" />
+      </Head>
       <header className="bg-[#D6C29F] py-4 px-6 shadow-md">
         <div className="container mx-auto">
           <nav className="flex items-center justify-between flex-wrap">

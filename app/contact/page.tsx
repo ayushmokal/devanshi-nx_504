@@ -8,6 +8,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import Head from 'next/head';
 
 interface IFormInput {
   name: string;
@@ -71,6 +72,10 @@ export default function Contact() {
 
   return (
     <main className="min-h-screen bg-[#FFF9F0]">
+      <Head>
+        <title>Devanshi NX Banquets - Best Banquet Hall in Navi Mumbai</title>
+        <meta name="description" content="Devanshi NX Banquets offers the best banquet hall in Navi Mumbai for weddings, engagements, birthdays, and corporate events. Book your perfect event venue today!" />
+      </Head>
       <header className="bg-[#D6C29F] py-4 px-6 shadow-md">
         <div className="container mx-auto">
           <nav className="flex items-center justify-between flex-wrap">
@@ -278,8 +283,8 @@ export default function Contact() {
               />
               <h2 className="text-xl font-bold mb-2">Banquet Address</h2>
               <p className="text-sm mb-4">
-                Plot No. L-1, Sector KWC, Near Express Way, next to Devanshi Inn Hotel,
-                Kalamboli, Panvel, Maharashtra 410218
+              Neelsidhi Amrante, Shop No. F-12,13,14,15, 1st Floor,
+              Near Dmart, Sector-9E, Kalamboli, Navi Mumbai, Maharashtra - 410218.
               </p>
               <h2 className="text-xl font-bold mb-2">Contact us</h2>
               <a href="tel:+919529023967" className="block text-sm text-blue-600 hover:underline mb-1">9529023967</a>
@@ -306,7 +311,6 @@ export default function Contact() {
                     <li><Link href="/amenities" className="hover:underline">Amenities</Link></li>
                     <li><Link href="/events" className="hover:underline">Events</Link></li>
                     <li><Link href="/gallery" className="hover:underline">Gallery</Link></li>
-                    <li><Link href="/blog" className="hover:underline">Blog</Link></li>
                     <li><Link href="/contact" className="hover:underline">Contact Us</Link></li>
                   </ul>
                 </div>
@@ -333,7 +337,7 @@ export default function Contact() {
   </p>
 </div>
         </div>
-      </footer>
+      </footer>  
     </main>
   );
 }
