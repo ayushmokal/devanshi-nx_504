@@ -24,12 +24,20 @@ interface IFormInput {
 
 const PhotoService = {
   getImages: () => Promise.resolve([
-    { itemImageSrc: "/images/weddings.jpg", thumbnailImageSrc: "/images/weddings.jpg", alt: "Wedding 1" },
-    { itemImageSrc: "/images/weddings2.jpg", thumbnailImageSrc: "/images/weddings2.jpg", alt: "Wedding 2" },
-    { itemImageSrc: "/images/birthdays.png", thumbnailImageSrc: "/images/birthdays.png", alt: "Birthday 1" },
-    { itemImageSrc: "/images/birthdays2.png", thumbnailImageSrc: "/images/birthdays2.png", alt: "Birthday 2" },
-    { itemImageSrc: "/images/collab.png", thumbnailImageSrc: "/images/collab.png", alt: "Collaboration 1" },
-    { itemImageSrc: "/images/collab2.png", thumbnailImageSrc: "/images/collab2.png", alt: "Collaboration 2" },
+    { itemImageSrc: "/images/gallery/1.jpeg", thumbnailImageSrc: "/images/gallery/1.jpeg", alt: "Gallery Image 1" },
+    { itemImageSrc: "/images/gallery/2.jpeg", thumbnailImageSrc: "/images/gallery/2.jpeg", alt: "Gallery Image 2" },
+    { itemImageSrc: "/images/gallery/4.jpeg", thumbnailImageSrc: "/images/gallery/4.jpeg", alt: "Gallery Image 4" },
+    { itemImageSrc: "/images/gallery/5.jpeg", thumbnailImageSrc: "/images/gallery/5.jpeg", alt: "Gallery Image 5" },
+    { itemImageSrc: "/images/gallery/6.jpeg", thumbnailImageSrc: "/images/gallery/6.jpeg", alt: "Gallery Image 6" },
+    { itemImageSrc: "/images/gallery/7.jpeg", thumbnailImageSrc: "/images/gallery/7.jpeg", alt: "Gallery Image 7" },
+    { itemImageSrc: "/images/gallery/8.jpeg", thumbnailImageSrc: "/images/gallery/8.jpeg", alt: "Gallery Image 8" },
+    { itemImageSrc: "/images/gallery/44.jpeg", thumbnailImageSrc: "/images/gallery/44.jpeg", alt: "Gallery Image 44" },
+    { itemImageSrc: "/images/gallery/about.png", thumbnailImageSrc: "/images/gallery/about.png", alt: "About Image" },
+    { itemImageSrc: "/images/gallery/SAP_8566.JPG", thumbnailImageSrc: "/images/gallery/SAP_8566.JPG", alt: "SAP Image 8566" },
+    { itemImageSrc: "/images/gallery/SAP_8588.JPG", thumbnailImageSrc: "/images/gallery/SAP_8588.JPG", alt: "SAP Image 8588" },
+    { itemImageSrc: "/images/gallery/SAP_8589.JPG", thumbnailImageSrc: "/images/gallery/SAP_8589.JPG", alt: "SAP Image 8589" },
+    { itemImageSrc: "/images/gallery/SAP_8596.JPG", thumbnailImageSrc: "/images/gallery/SAP_8596.JPG", alt: "SAP Image 8596" },
+    { itemImageSrc: "/images/gallery/SAP_8623.JPG", thumbnailImageSrc: "/images/gallery/SAP_8623.JPG", alt: "SAP Image 8623" },
   ])
 };
 
@@ -294,10 +302,11 @@ export default function Home() {
                 Kalamboli, Panvel, Maharashtra 410218
               </p>
               <h2 className="text-xl font-bold mb-2">Contact us</h2>
-              <a href="tel:+919028114166" className="block text-sm text-blue-600 hover:underline mb-1">9028114166</a>
-              <a href="tel:+919022710001" className="block text-sm text-blue-600 hover:underline">9022710001</a>
+              <a href="tel:+919529023967" className="block text-sm text-blue-600 hover:underline mb-1">9529023967</a>
+            <a href="tel:+918976666612" className="block text-sm text-blue-600 hover:underline">8976666612</a>
+            <a href="tel:+919833863645" className="block text-sm text-blue-600 hover:underline">9833863645</a>
               <h2 className="text-xl font-bold mb-2">Email Us</h2>
-              <a href="mailto:tiarabanquets@gmail.com" className="text-sm text-blue-600 hover:underline">devanshinx@gmail.com</a>
+              <a href="mailto:nxdevanshi@gmail.com" className="text-sm text-blue-600 hover:underline">nxdevanshi@gmail.com</a>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-16 mb-8">
                 <div>
@@ -339,10 +348,10 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-8">
-            <p className="text-sm">
-              Copyright © 2024. All rights reserved | Crafted by <a href="https://504labs.tech/" target="_blank" rel="noopener noreferrer" className="white hover:underline">504 LABS</a>
-            </p>
-          </div>
+  <p className="text-sm">
+    Copyright © 2024. All rights reserved | Crafted by <a href="https://504labs.tech/" target="_blank" rel="noopener noreferrer" className="white hover:underline">504 LABS</a>
+  </p>
+</div>
         </div>
       </footer>
     </main>

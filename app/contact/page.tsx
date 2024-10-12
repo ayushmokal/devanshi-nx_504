@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 
@@ -155,7 +155,7 @@ export default function Contact() {
           </div>
           <div className="bg-[#F5E6D3] p-6 rounded-lg shadow-md text-center">
             <h2 className="font-bold mb-2 text-[#8B4513]">EMAIL</h2>
-            <a href="mailto:tiarabanquets@gmail.com" className="text-sm text-blue-600 hover:underline">tiarabanquets@gmail.com</a>
+            <a href="mailto:nxdevanshi@gmail.com" className="text-sm text-blue-600 hover:underline">nxdevanshi@gmail.com</a>
           </div>
         </div>
 
@@ -169,25 +169,98 @@ export default function Contact() {
               style={{ marginLeft: '28px', marginTop: '40px' }}
               className="mb-4"
             />
-            <p className="mb-4"><b>Book Now</b> and host your dream event with us!</p>
+            <p className="mb-8"><b>Book Now</b> and host your dream event with us!</p>
           </div>
 
           <div className="md:w-2/3 bg-[#F5E6D3] p-6 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-4 text-[#8B4513]">Contact us and book your event</h2>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Input {...register('name')} placeholder="Full Name" className="bg-white" />
-                <Input {...register('email')} placeholder="Email" type="email" className="bg-white" />
+                <div>
+                  <Input
+                    {...register("name", { required: "Name is required" })}
+                    placeholder="Your Name"
+                    className="bg-white"
+                  />
+                  {errors.name && <span className="text-red-500 text-sm">{errors.name.message}</span>}
+                </div>
+                <div>
+                  <Input
+                    {...register("email", {
+                      required: "Email is required",
+                      pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: "Invalid email address"
+                      }
+                    })}
+                    placeholder="Email"
+                    type="email"
+                    className="bg-white"
+                  />
+                  {errors.email && <span className="text-red-500 text-sm">{errors.email.message}</span>}
+                </div>
               </div>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Input {...register('phone')} placeholder="Phone" type="tel" className="bg-white" />
-                <Input {...register('subject')} placeholder="Subject" className="bg-white" />
+                <div>
+                  <Input
+                    {...register("phone", { required: "Phone number is required" })}
+                    placeholder="Phone no"
+                    type="tel"
+                    className="bg-white"
+                  />
+                  {errors.phone && <span className="text-red-500 text-sm">{errors.phone.message}</span>}
+                </div>
+                <div>
+                  <Controller
+                    control={control}
+                    name="date"
+                    rules={{ required: "Date is required" }}
+                    render={({ field: { onChange, value } }) => (
+                      <DatePicker
+                        selected={value}
+                        onChange={(date: Date) => onChange(date)}
+                        dateFormat="dd-MM-yyyy"
+                        placeholderText="dd-mm-yy"
+                        className="bg-white w-full p-2 rounded-md"
+                      />
+                    )}
+                  />
+                  {errors.date && <span className="text-red-500 text-sm">{errors.date.message}</span>}
+                </div>
               </div>
-              <Textarea {...register('message')} placeholder="Message" className="bg-white" rows={4} />
-              <Button type="submit" className="bg-[#8B4513] text-white hover:bg-[#6F3609] w-full">
-                Submit
-              </Button>
+              <div>
+                <Input
+                  {...register("subject", { required: "Subject is required" })}
+                  placeholder="Subject"
+                  className="bg-white"
+                />
+                {errors.subject && <span className="text-red-500 text-sm">{errors.subject.message}</span>}
+              </div>
+              <div>
+                <Textarea
+                  {...register("message", { required: "Message is required" })}
+                  placeholder="Message"
+                  className="bg-white"
+                  rows={4}
+                />
+                {errors.message && <span className="text-red-500 text-sm">{errors.message.message}</span>}
+              </div>
+              <div className="text-center">
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className={`bg-[#8B4513] text-white hover:bg-[#6F3609] w-full ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                >
+                  {isSubmitting ? 'Submitting...' : 'Submit'}
+                </Button>
+              </div>
             </form>
+            {submitStatus === 'success' && (
+              <p className="mt-4 text-green-600 text-center">Form submitted successfully!</p>
+            )}
+            {submitStatus === 'error' && (
+              <p className="mt-4 text-red-600 text-center">An error occurred. Please try again.</p>
+            )}
           </div>
         </div>
       </div>
@@ -213,7 +286,7 @@ export default function Contact() {
             <a href="tel:+918976666612" className="block text-sm text-blue-600 hover:underline">8976666612</a>
             <a href="tel:+919833863645" className="block text-sm text-blue-600 hover:underline">9833863645</a>
               <h2 className="text-xl font-bold mb-2">Email Us</h2>
-              <a href="mailto:tiarabanquets@gmail.com" className="text-sm text-blue-600 hover:underline">devanshinx@gmail.com</a>
+              <a href="mailto:nxdevanshi@gmail.com" className="text-sm text-blue-600 hover:underline">nxdevanshi@gmail.com</a>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-16 mb-8">
                 <div>

@@ -270,10 +270,11 @@ export default function Home() {
                 Kalamboli, Panvel, Maharashtra 410218
               </p>
               <h2 className="text-xl font-bold mb-2">Contact us</h2>
-              <a href="tel:+919028114166" className="block text-sm text-blue-600 hover:underline mb-1">9028114166</a>
-              <a href="tel:+919022710001" className="block text-sm text-blue-600 hover:underline">9022710001</a>
+              <a href="tel:+919529023967" className="block text-sm text-blue-600 hover:underline mb-1">9529023967</a>
+            <a href="tel:+918976666612" className="block text-sm text-blue-600 hover:underline">8976666612</a>
+            <a href="tel:+919833863645" className="block text-sm text-blue-600 hover:underline">9833863645</a>
               <h2 className="text-xl font-bold mb-2">Email Us</h2>
-              <a href="mailto:tiarabanquets@gmail.com" className="text-sm text-blue-600 hover:underline">devanshinx@gmail.com</a>
+              <a href="mailto:nxdevanshi@gmail.com" className="text-sm text-blue-600 hover:underline">nxdevanshi@gmail.com</a>
               
               <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-16 mb-8">
                 <div>
