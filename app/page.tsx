@@ -141,7 +141,7 @@ export default function Home() {
         <div className="flex flex-col md:flex-row items-center mb-16">
           <div className="md:w-1/2 mb-8 md:mb-0">
             <Image
-              src="/images/banquet-image.jpg"
+              src="/images/hallhome.jpeg"
               alt="Banquet Hall"
               width={500}
               height={200}
@@ -165,20 +165,19 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[{
                 icon: '/images/tv-icon.png',
-                title: '55-Inch TV and Projector',
+                title: 'Projector Screen',
                 description: 'Designed to give the attendees a visual experience, making it easier for them to follow along with presentations.'
               },
               {
                 icon: '/images/spacious-icon.png',
-                title: 'Spacious Rooms',
-                description: 'Our banquet halls are specially designed to cater large groups of people. The rooms are well-lit and properly ventilated to ensure comfort.'
+                title: 'Spacious Hall',
+                description: 'Our banquet hall are specially designed to cater large groups of people. The rooms are well-lit and properly ventilated to ensure comfort.'
               },
               {
                 icon: '/images/people-icon.png',
-                title: '150 People Capacity',
+                title: '300 People Capacity',
                 items: [
-                  'Seats for half of the group',
-                  '150 people at a time',
+                  '300 people at a time',
                   'Efficient use of space for diverse event types'
                 ]
               }].map((amenity, index) => (
@@ -228,19 +227,19 @@ export default function Home() {
           {[
             {
               title: 'Weddings',
-              image: '/images/weddings.jpg',
+              image: '/images/weddings.jpeg',
               description: 'Whether planning a warm and intimate gathering or a grand affair, we ensure that your wedding day is unforgettable.',
               align: 'left'
             },
             {
               title: 'Birthdays',
-              image: '/images/birthdays.png',
+              image: '/images/birthday.jpeg',
               description: 'We provide a versatile venue for all your personal events, where they can enjoy their all types of parties like birthday, baptism, cocktail party, and other personal party programs with full of zeal.',
               align: 'right'
             },
             {
               title: 'Collaborations',
-              image: '/images/collab.png',
+              image: '/images/collabmain.JPG',
               description: 'At The Banquets, we have proudly collaborated with production houses, advertising, styling brands, and other companies, offering our exquisite venues as the ideal backdrop for their creative projects.',
               align: 'left'
             }

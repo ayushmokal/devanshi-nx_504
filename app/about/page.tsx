@@ -135,7 +135,7 @@ export default function Home() {
             <h3 className="text-2xl font-bold text-[#8B4513] mb-4">Welcome to top class pillarless banquet in Navi Mumbai</h3>
             <p className="text-[#666] mb-6">
               We are known for our impeccable banquet & wedding planning services.
-              We at Tiarra banquets are here to provide fresh ideas, innovative styling
+              We at DevanshiNX banquets are here to provide fresh ideas, innovative styling
               and creative inputs to pull your dream with huge space.
             </p>
             <Button onClick={scrollToBookingForm} className="inline-block text-sm px-4 py-2 leading-none text-white hover:border-transparent hover:text-[#8B4513] hover:bg-white mt-4 lg:mt-0 bg-[#8B4513]">Book</Button>
@@ -153,10 +153,10 @@ export default function Home() {
 
         <div className="mb-16">
           <Image
-            src="/images/about.png"
+            src="/images/aboutus.jpeg"
             alt="Happy wedding couple"
             width={1200}
-            height={600}
+            height={400}
             className="rounded-lg mx-auto"
           />
         </div>

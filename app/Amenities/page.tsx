@@ -31,10 +31,10 @@ export default function Amenities() {
     { name: 'Contact Us', href: '/contact' }
   ];
   const amenities = [
-    { icon: '/images/ac.png', title: 'AC HALLS', description: 'Stay cool and comfortable with our air conditioning system, ensuring a refreshing atmosphere throughout your event. Ideal for creating a pleasant and enjoyable environment for all your guests.' },
+    { icon: '/images/ac.png', title: 'AC BANQUET', description: 'Stay cool and comfortable with our air conditioning system, ensuring a refreshing atmosphere throughout your event. Ideal for creating a pleasant and enjoyable environment for all your guests.' },
     { icon: '/images/cat.png', title: 'CATERING SERVICE', description: 'Enjoy our banquet catering with an open kitchen where guests can watch skilled chefs prepare delicious dishes for a truly memorable dining experience.' },
     { icon: '/images/log.png', title: 'LODGING', description: 'Our banquet facility offers comfortable lodging with 8 well-appointed rooms, perfect for guests requiring overnight stay. Provides for a relaxing stay, ensuring convenience and comfort after a day of celebration.' },
-    { icon: '/images/.png', title: '300 SEATING', description: 'A 500-seating banquet offers a spacious elegant setting for large events. With flexible seating arrangements, it creates a welcoming atmosphere for gatherings, celebrations, ensuring a memorable experience for all guests.' },
+    { icon: '/images/mic.png', title: '300 SEATING', description: 'A 300-seating banquet offers a spacious elegant setting for large events. With flexible seating arrangements, it creates a welcoming atmosphere for gatherings, celebrations, ensuring a memorable experience for all guests.' },
     { icon: '/images/stud.png', title: 'STUDIO', description: 'A photography studio in a banquet center offers professional photography services, capturing memorable moments and enhancing the event experience. The studio offers space for formal shots, personal photoshoots and much more.' },
     { icon: '/images/park.png', title: 'PARKING', description: 'Convenient parking is available on-site for all guests, ensuring a hassle-free arrival and departure experience at our banquet facility. With ample space and easy access, guests can relax and enjoy the event without parking concerns.' },
   ];
