@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
@@ -35,7 +34,7 @@ export default function Events() {
     { title: 'Weddings', image: '/images/events1.png', description: 'Whether planning a warm and intimate gathering or a grand affair, we ensure that your wedding day is unforgettable.' },
     { title: 'Engagement', image: '/images/events2.png', description: 'Celebrate your love story with an enchanting engagement ceremony in our elegant venue.' },
     { title: 'Corporate Events', image: '/images/events3.png', description: 'Host impressive corporate events, conferences, and meetings in our state-of-the-art facilities.' },
-    { title: 'Birthday Party', image: '/images/events4.png', description: 'Create magical memories with a birthday celebration that caters to all ages and preferences.' },
+    { title: 'Birthday Party', image: '/images/birthday.jpeg', description: 'Create magical memories with a birthday celebration that caters to all ages and preferences.' },
   ];
 
   const { register, handleSubmit, control, formState: { errors }, reset } = useForm<IFormInput>();
@@ -51,8 +50,7 @@ export default function Events() {
     try {
       data.date = data.date.toLocaleDateString('en-GB'); // This will format the date as dd/mm/yyyy
 
-      const response = await fetch(scriptUrl, {
-        method: 'POST',
+      void await fetch(scriptUrl, {        method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
@@ -78,7 +76,7 @@ export default function Events() {
   };
 
   return (
-    <main className="min-h-screen bg-[#FFF9F0]">
+    <main className="min-h-screen bg-[#FFF9F0] flex flex-col">
       <header className="bg-[#D6C29F] py-4 px-6 shadow-md">
         <div className="container mx-auto">
           <nav className="flex items-center justify-between flex-wrap">
@@ -145,7 +143,7 @@ export default function Events() {
             />
           </div>
 
-        <div className="space-y-16">
+        <div className="space-y-16 mb-32">
           {events.map((event, index) => (
             <div key={event.title} className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-8`}>
               <div className="w-full md:w-1/2">
@@ -174,7 +172,7 @@ export default function Events() {
         </div>
 
         {/* Booking Form */}
-        <div id="booking-form" className="bg-[#F5E6D3] p-8 rounded-lg shadow-md max-w-3xl mx-auto">
+        <div id="booking-form" className="bg-[#F5E6D3] p-8 rounded-lg shadow-md max-w-3xl mx-auto mt-32">
           <h2 className="text-3xl font-bold mb-6 text-center text-[#8B4513]">Booking Form</h2>
           <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

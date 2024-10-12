@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
@@ -51,8 +50,7 @@ export default function Home() {
     try {
       data.date = data.date.toLocaleDateString('en-GB'); // This will format the date as dd/mm/yyyy
 
-      const response = await fetch(scriptUrl, {
-        method: 'POST',
+      void await fetch(scriptUrl, {        method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
@@ -129,7 +127,7 @@ export default function Home() {
           Your browser does not support the video tag.
         </video>
         <div className="absolute inset-0 bg-black bg-opacity-10 flex flex-col items-center justify-center text-white">
-          <img src="/images/englogo.png" alt="Devanshi NX Logo" width={400} height={200} className="mb-8" />
+          <Image src="/images/englogo.png" alt="Devanshi NX Logo" width={400} height={200} className="mb-8" />
           <h2 className="text-2xl md:text-4xl font-bold mb-8 text-center">Designing your perfect day, the way you imagined</h2>
           <Button onClick={scrollToBookingForm} className="inline-block text-sm px-4 py-2 leading-none text-white hover:border-transparent hover:text-[#8B4513] hover:bg-white mt-4 lg:mt-0 bg-[#8B4513]">
             Book Now
@@ -169,19 +167,19 @@ export default function Home() {
                 description: 'Designed to give the attendees a visual experience, making it easier for them to follow along with presentations.'
               },
               {
-                icon: '/images/spacious-icon.png',
+                icon: '/images/ac.png',
                 title: 'Spacious Hall',
                 description: 'Our banquet hall are specially designed to cater large groups of people. The rooms are well-lit and properly ventilated to ensure comfort.'
               },
               {
-                icon: '/images/people-icon.png',
+                icon: '/images/mic.png',
                 title: '300 People Capacity',
                 items: [
                   '300 people at a time',
                   'Efficient use of space for diverse event types'
                 ]
-              }].map((amenity, index) => (
-                <div key={index} className="bg-white bg-opacity-90 border border-[#D4AF37] p-6 rounded-lg text-center shadow-md">
+              }].map((amenity, _index) => (
+                <div key={_index} className="bg-white bg-opacity-90 border border-[#D4AF37] p-6 rounded-lg text-center shadow-md">
                   <Image
                     src={amenity.icon}
                     alt={amenity.title}
@@ -243,7 +241,7 @@ export default function Home() {
               description: 'At The Banquets, we have proudly collaborated with production houses, advertising, styling brands, and other companies, offering our exquisite venues as the ideal backdrop for their creative projects.',
               align: 'left'
             }
-          ].map((event, index) => (
+          ].map((event) => (
             <div key={event.title} className={`flex flex-col ${event.align === 'right' ? 'md:flex-row-reverse' : 'md:flex-row'} items-stretch mb-12`}>
               <div className={`w-full md:w-1/2 relative ${event.align === 'right' ? 'md:pl-4' : 'md:pr-4'}`}>
                 <Image
@@ -339,7 +337,7 @@ export default function Home() {
               />
               {errors.subject && <span className="text-red-500 text-sm">{errors.subject.message}</span>}
             </div>
-            <div>
+                        <div>
               <Textarea
                 {...register("message", { required: "Message is required" })}
                 placeholder="Message"

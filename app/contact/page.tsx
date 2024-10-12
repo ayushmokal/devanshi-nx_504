@@ -50,7 +50,7 @@ export default function Contact() {
     try {
       data.date = data.date.toLocaleDateString('en-GB'); // This will format the date as dd/mm/yyyy
 
-      const response = await fetch(scriptUrl, {
+      void await fetch(scriptUrl, {
         method: 'POST',
         mode: 'no-cors',
         headers: {

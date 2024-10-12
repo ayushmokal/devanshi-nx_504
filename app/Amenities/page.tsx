@@ -3,7 +3,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
@@ -59,8 +58,7 @@ export default function Amenities() {
     try {
       data.date = data.date.toLocaleDateString('en-GB'); // This will format the date as dd/mm/yyyy
 
-      const response = await fetch(scriptUrl, {
-        method: 'POST',
+      void await fetch(scriptUrl, {        method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',

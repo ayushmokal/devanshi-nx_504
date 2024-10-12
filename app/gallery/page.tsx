@@ -73,8 +73,7 @@ export default function Home() {
     try {
       data.date = data.date.toLocaleDateString('en-GB'); // This will format the date as dd/mm/yyyy
 
-      const response = await fetch(scriptUrl, {
-        method: 'POST',
+      void await fetch(scriptUrl, {        method: 'POST',
         mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
@@ -113,11 +112,11 @@ export default function Home() {
   }, []);
 
   const itemTemplate = (item) => {
-    return <img src={item.itemImageSrc} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
+    return <Image src={item.itemImageSrc} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
   }
 
   const thumbnailTemplate = (item) => {
-    return <img src={item.thumbnailImageSrc} alt={item.alt} style={{ display: 'block' }} />;
+    return <Image src={item.thumbnailImageSrc} alt={item.alt} style={{ display: 'block' }} />;
   }
 
   return (
