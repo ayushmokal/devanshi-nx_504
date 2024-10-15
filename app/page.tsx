@@ -237,7 +237,7 @@ export default function Home() {
             {
               title: 'Birthdays',
               image: '/images/birthday.jpeg',
-              description: 'We provide a versatile venue for all your personal events, where they can enjoy their all types of parties like birthday, baptism, cocktail party, and other personal party programs with full of zeal.',
+              description: 'We provide a versatile venue for all your personal events, where they can enjoy their all types of parties like birthday, Corporate events and other personal party programs with full of zeal.',
               align: 'right'
             },
             {
