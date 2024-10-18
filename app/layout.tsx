@@ -14,10 +14,30 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: 'Devanshi NX',
-  description: 'Devanshi NX Banquets',
+  title: 'Devanshi NX Banquets - Best Banquet Hall in Navi Mumbai',
+  description: 'Devanshi NX Banquets offers the best banquet hall in Navi Mumbai for weddings, engagements, birthdays, and corporate events. Book your perfect event venue today!',
+  keywords: 'banquet hall, Navi Mumbai, wedding venue, event space, corporate events, birthday parties',
+  openGraph: {
+    title: 'Devanshi NX Banquets - Best Banquet Hall in Navi Mumbai',
+    description: 'Book your perfect event at Devanshi NX Banquets, the best banquet hall in Navi Mumbai.',
+    images: [
+      {
+        url: 'https://www.devanshiNXbanquets.com/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Devanshi NX Banquets Hall',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Devanshi NX Banquets - Best Banquet Hall in Navi Mumbai',
+    description: 'Book your perfect event at Devanshi NX Banquets, the best banquet hall in Navi Mumbai.',
+    images: ['https://www.devanshiNXbanquets.com/images/twitter-image.jpg'],
+  },
   icons: {
     icon: '/favicon.ico',
+    apple: '/apple-icon.png',
   },
 };
 
