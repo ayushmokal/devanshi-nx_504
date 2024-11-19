@@ -112,11 +112,29 @@ export default function Home() {
   }, []);
 
   const itemTemplate = (item) => {
-    return <Image src={item.itemImageSrc} alt={item.alt} style={{ width: '100%', display: 'block' }} />;
+    return (
+      <Image 
+        src={item.itemImageSrc} 
+        alt={item.alt} 
+        width={640}
+        height={480}
+        className="w-full"
+        style={{ display: 'block' }}
+      />
+    );  
   }
 
   const thumbnailTemplate = (item) => {
-    return <Image src={item.thumbnailImageSrc} alt={item.alt} style={{ display: 'block' }} />;
+    return (
+      <Image 
+        src={item.thumbnailImageSrc} 
+        alt={item.alt} 
+        width={100}
+        height={75}
+        className="w-full"
+        style={{ display: 'block' }}
+      />
+    );
   }
 
   return (
@@ -301,7 +319,7 @@ export default function Home() {
               Near Dmart, Sector-9E, Kalamboli, Navi Mumbai, Maharashtra - 410218.
               </p>
               <h2 className="text-xl font-bold mb-2">Contact us</h2>
-              <a href="tel:+919529023967" className="block text-sm text-blue-600 hover:underline mb-1">9529023967</a>
+            <a href="tel:+919529023967" className="block text-sm text-blue-600 hover:underline mb-1">9529023967</a>
             <a href="tel:+918976666612" className="block text-sm text-blue-600 hover:underline">8976666612</a>
             <a href="tel:+919833863645" className="block text-sm text-blue-600 hover:underline">9833863645</a>
               <h2 className="text-xl font-bold mb-2">Email Us</h2>
@@ -334,7 +352,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2">
               <div className="aspect-w-16 aspect-h-9">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.601509396352!2d73.10037567510857!3d19.037273353187345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e9e9d7678267%3A0xc62064ffc5975921!2sAmarante%2C%20NEELSIDHI%20AMARANTE%2C%20Roadpali%2C%20Kalamboli%2C%20Panvel%2C%20Navi%20Mumbai%2C%20Maharashtra%20410218!5e0!3m2!1sen!2sin!4v1728627366842!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3771.6044122273147!2d73.10056041084131!3d19.037145553116684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7e90034f8b5fd%3A0x1592d6d1695a6f2f!2sDevanshi%20NX%20Banquets%20and%20Lodging!5e0!3m2!1sen!2sin!4v1732044938634!5m2!1sen!2sin"
                   width="360px"
                   height="400px"
                   allowFullScreen={false}
